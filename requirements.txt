@@ -13,8 +13,6 @@ pdfminer==20191125
 pdfminer.six==20220319
 pickleshare==0.7.5
 Pillow==9.1.0
-preshed==3.0.6
-protobuf==3.20.0
 regex==2022.3.15
 spacy==3.2.4
 spacy-alignments==0.8.5
