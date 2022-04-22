@@ -15,7 +15,7 @@ def extract_skills(resume, skill_list):
         for i in skill_list:
             fuzz_ratio = fuzz.ratio(i, str(tok.text))
             if fuzz_ratio > 75:
-                ratio.append(j)
+                ratio.append(tok)
     return ratio
 
 def extract_name(resume):
