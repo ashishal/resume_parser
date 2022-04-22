@@ -10,10 +10,10 @@ skills_list = ['laravel', 'php', 'web application', 'html', 'react', 'cordova', 
 
 def extract_skills(resume, skill_list):
     ratio = []
-    resume_list = nltk.word_tokenize(resume)
-    for j in resume_list:
+    resume = nlp(resume)
+    for tok in resume:
         for i in skill_list:
-            fuzz_ratio = fuzz.ratio(i, j)
+            fuzz_ratio = fuzz.ratio(i, tok)
             if fuzz_ratio > 75:
                 ratio.append(j)
     return ratio
