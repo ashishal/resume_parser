@@ -13,7 +13,7 @@ def extract_skills(resume, skill_list):
     resume = nlp(resume)
     for tok in resume:
         for i in skill_list:
-            fuzz_ratio = fuzz.ratio(i, tok)
+            fuzz_ratio = fuzz.ratio(i, str(tok))
             if fuzz_ratio > 75:
                 ratio.append(j)
     return ratio
